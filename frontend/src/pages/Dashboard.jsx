@@ -40,17 +40,17 @@ export default function Dashboard() {
 
       {/* Stats Grid */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px', marginBottom: '28px' }}>
-        <StatCard label="Total Products" value={products.length} color="#818cf8" icon="📦" sub="In inventory" />
-        <StatCard label="Total Sales" value={sales.length} color="#34d399" icon="🧾" sub="All time" />
-        <StatCard label="Revenue" value={`₹${totalRevenue.toLocaleString()}`} color="#f59e0b" icon="💰" sub="Total earned" />
-        <StatCard label="Low Stock" value={lowStock.length} color="#f87171" icon="⚠️" sub="Need restock" />
+        <StatCard label="Total Products" value={products.length} color="#818cf8" sub="In inventory" />
+        <StatCard label="Total Sales" value={sales.length} color="#34d399"  sub="All time" />
+        <StatCard label="Revenue" value={`₹${totalRevenue.toLocaleString()}`} color="#f59e0b"  sub="Total earned" />
+        <StatCard label="Low Stock" value={lowStock.length} color="#f87171"  sub="Need restock" />
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
         {/* Low Stock Alert */}
         <div style={{ background: '#13151f', border: '1px solid #1e2130', borderRadius: '16px', padding: '24px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '20px' }}>
-            <span style={{ fontSize: '18px' }}>⚠️</span>
+            <span style={{ fontSize: '18px' }}></span>
             <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#f1f5f9' }}>Low Stock Alert</h3>
             {lowStock.length > 0 && (
               <span style={{ marginLeft: 'auto', background: 'rgba(248,113,113,0.15)', color: '#f87171', padding: '2px 10px', borderRadius: '20px', fontSize: '12px', fontWeight: '600' }}>
@@ -78,7 +78,7 @@ export default function Dashboard() {
         {/* Recent Sales */}
         <div style={{ background: '#13151f', border: '1px solid #1e2130', borderRadius: '16px', padding: '24px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '20px' }}>
-            <span style={{ fontSize: '18px' }}>🕐</span>
+            <span style={{ fontSize: '18px' }}></span>
             <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#f1f5f9' }}>Recent Sales</h3>
           </div>
           {sales.length === 0 ? (
